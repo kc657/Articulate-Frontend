@@ -14,7 +14,7 @@ class AttemptList extends Component {
   componentWillMount () {
     $.ajax({
       method: 'GET',
-      url: 'http://localhost:3001/api/attempts/' + this.props.currentUserId
+      url: 'https://articulat.herokuapp.com/api/attempts/' + this.props.currentUserId
     })
     .then((res) => {
       this.setState({allAttempts: res})
@@ -30,7 +30,7 @@ class AttemptList extends Component {
   deletingProject = () => {
     $.ajax({
       method: 'DELETE',
-      url: 'http://localhost:3001/api/projects/deleteOne/' + this.props.selectedProject
+      url: 'https://articulat.herokuapp.com/api/projects/deleteOne/' + this.props.selectedProject
     })
     .then((res)=>{
       this.toggleDeleteModal()

@@ -68,7 +68,7 @@ class BodyContainer extends Component {
     e.preventDefault()
     $.ajax({
         method: 'GET',
-        url: 'http://localhost:3001/api/watson/tone/',
+        url: 'https://articulat.herokuapp.com/api/watson/tone/',
         data: {
           'myText': this.state.newProjectTranscript
         }
@@ -122,7 +122,7 @@ class BodyContainer extends Component {
         })
         $.ajax({
           method: 'POST',
-          url: 'http://localhost:3001/api/projects',
+          url: 'https://articulat.herokuapp.com/api/projects',
           data: {
             title: this.state.newProjectTitle,
             transcript: this.state.newProjectTranscript,

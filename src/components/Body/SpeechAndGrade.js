@@ -17,7 +17,7 @@ class SpeechAndGrade extends Component {
   }
 
   componentDidMount(){
-    $.ajax({method:'GET',url: 'http://localhost:3001/api/projects/showOne/' + this.props.selectedProject})
+    $.ajax({method:'GET',url: 'https://articulat.herokuapp.com/api/projects/showOne/' + this.props.selectedProject})
     .then((res) => {
       this.setState({
         userTranscript: res[0].transcript,
@@ -94,7 +94,7 @@ class SpeechAndGrade extends Component {
 
         //* Fetching tone from API and then posting attempt on success *//
         $.ajax({method:'GET',
-          url: 'http://localhost:3001/api/watson/tone/',
+          url: 'https://articulat.herokuapp.com/api/watson/tone/',
           data:{'myText': this.state.watsonInput}})
         .then((res) => {
           let roundTo = (n, digits) => {
@@ -125,7 +125,7 @@ class SpeechAndGrade extends Component {
           this.setState({attemptTone:attemptTone}, function(){
             $.ajax({
               method: 'POST',
-              url: 'http://localhost:3001/api/attempts',
+              url: 'https://articulat.herokuapp.com/api/attempts',
               data: {
                 attemptTranscript: this.state.watsonInput,
                 attemptTranscriptSpilt: watsonInputHash,

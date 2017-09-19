@@ -13,7 +13,7 @@ class ProjectList extends Component {
   componentWillMount () {
     $.ajax({
       method: 'GET',
-      url: 'http://localhost:3001/api/projects/' + this.props.currentUserId
+      url: 'https://articulat.herokuapp.com/api/projects/' + this.props.currentUserId
     })
     .then((res) => {
       this.setState({allProjects: res})
@@ -25,7 +25,7 @@ class ProjectList extends Component {
   componentWillReceiveProps () {
     $.ajax({
       method: 'GET',
-      url: 'http://localhost:3001/api/projects/' + this.props.currentUserId
+      url: 'https://articulat.herokuapp.com/api/projects/' + this.props.currentUserId
     })
     .then((res) => {
       this.setState({allProjects: res})
