@@ -68,7 +68,7 @@ class SpeechToTextBox extends Component {
             <center>
               <form>
                 <textarea className='materialize-textarea speech-only' id='speech' data-id-type='userInput' onChange={this.props.saveWatsonInput} placeholder='Spoken output goes here' onKeyPress={this.props.triggerWatsonSave}></textarea>
-                {!this.state.confirmation? <p>Select text and press enter after completion to review scorecard...</p>:<p>Press Enter Again</p>}
+                {!this.state.confirmation? <p>Select the end of input text after completion and press enter after completion to review scorecard...</p>:<p>Press Enter Again</p>}
               </form>
             </center>
           </div>

@@ -19,6 +19,9 @@ class ProfilePage extends Component {
               <li>Select 'Add New Recording' and submit your recording after you have completed it for grading</li>
               <li>Use the scoring to make any adjustments to your speech before the big event!</li>
             </ol>
+            <ul>
+              <li>Tips: Be sure to articulate clearly!</li>
+            </ul>
           </div>}
         </div>
       </div>
