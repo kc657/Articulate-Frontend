@@ -31,6 +31,7 @@ class SpeechAndGrade extends Component {
     this.setState({isGrading: !this.state.isGrading})
   }
 
+// Extract this function to an external file w/ comments
   triggerWatsonSave = (e) => {
     if(e.key === 'Enter'){
       if (this.state.watsonInput === ''){
@@ -121,7 +122,6 @@ class SpeechAndGrade extends Component {
             socialTone_Agreeableness: roundTo((res.document_tone.tone_categories[2].tones[3].score * 100), 2),
             socialTone_EmotionalRange: roundTo((res.document_tone.tone_categories[2].tones[4].score * 100), 2),
           }
-          console.log();
           this.setState({attemptTone:attemptTone}, function(){
             $.ajax({
               method: 'POST',

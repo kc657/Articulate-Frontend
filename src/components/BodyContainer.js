@@ -143,10 +143,20 @@ class BodyContainer extends Component {
   }
 
   render() {
+    let localFunctionDetermination = null
+    {/* TODO: Extract this ternary into a function to determine the return */}
+
+
     return (
       <div className='BodyContainer'>
         {!this.state.newAttempt ? <ProfilePage clickNewAttempt={(e)=>this.clickNewAttempt(e)} openModal={(e)=>this.openModal(e)} handleProjectSelect={(e)=>this.handleProjectSelect(e)} handleProjectDelete={(e)=>this.handleProjectDelete(e)} selectedProject={this.state.selectedProject} selectedProjectScript={this.state.selectedProjectScript} selectedProjectTitle={this.state.selectedProjectTitle} currentUserId={this.props.currentUserId} /> : <SpeechAndGrade clickNewAttempt={(e)=>this.clickNewAttempt(e)} saveWatsonInput={(e)=>this.saveWatsonInput(e)} selectedProjectTitle={this.state.selectedProjectTitle} selectedProjectScript={this.state.selectedProjectScript} selectedProject={this.state.selectedProject}  currentUserId={this.props.currentUserId}/>}
-        <ProjectModal isModalOpen={this.state.isModalOpen} newProjectTitle={this.state.newProjectTitle} newProjectTranscript={this.state.newProjectTranscript} openModal={(e)=>this.openModal(e)} handleChange={(e)=>this.handleChange(e)} onProjectSubmit={(e)=>this.onProjectSubmit(e)}/>
+        <ProjectModal
+          isModalOpen={this.state.isModalOpen} 
+          newProjectTitle={this.state.newProjectTitle}
+          newProjectTranscript={this.state.newProjectTranscript}
+          openModal={(e)=>this.openModal(e)}
+          handleChange={(e)=>this.handleChange(e)}
+          onProjectSubmit={(e)=>this.onProjectSubmit(e)}/>
       </div>
     )
   }
