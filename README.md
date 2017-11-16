@@ -1,4 +1,4 @@
-# [Articulat.<span/>in](https://www.articulat.in) (Front-end Repository)
+# [Articulat.<span/>in](http://www.articulat.in/) (Front-end Repository)
 
 
 Articulat.<span/>in is a MERN stack application that helps presentation preperation by analyzing text differential of a written transcript and sound recording. Using Watson APIs, we capture the user's voice input, translate it to text, and compare it to the original transcript using several algorithms. The output of these algorithms provide insight on how far the user may have deviated from the original transcript and tone differentials.
@@ -29,11 +29,11 @@ End with an example of getting some data out of the system or using it for a lit
 * [IBM Watson](https://www.ibm.com/watson/developer/) - Speech-to-Text and Tone Analysis APIs
 * [Node.js](https://nodejs.org/en/) - JavaScript runtime environment for our back-end application
 * [Express](https://expressjs.com/) - Node.<span/>js framework used
-* [MongoDB](https://www.mongodb.com/) - Document-oriented NoSQL database 
+* [MongoDB](https://www.mongodb.com/) - Document-oriented NoSQL database
 * [Materialize](http://materializecss.com/) - Responsive CSS framework
 * [HTML & CSS](https://en.wikipedia.org/wiki/HTML) - Standard markup and styling language
 * [Heroku](https://www.heroku.com/home) - Deploment platform
-* [Original Repository](https://github.com/kc657/Articulat-in) - Workflow 
+* [Original Repository](https://github.com/kc657/Articulat-in) - Workflow
 
 ## Contributing
 
