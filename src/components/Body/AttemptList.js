@@ -12,6 +12,8 @@ class AttemptList extends Component {
   }
 
   componentWillMount () {
+    // TODO: Consider moving all ajax requests to one single file extracted away to a 'models' folder
+    // TODO: Reference the UGLY todo lab for react
     $.ajax({
       method: 'GET',
       url: 'https://articulat.herokuapp.com/api/attempts/' + this.props.currentUserId
@@ -50,9 +52,9 @@ class AttemptList extends Component {
           if (digits === undefined) {
             return('Did Not Detect');
           }
-          var multiplicator = Math.pow(10, digits)
-          n = parseFloat((n * multiplicator).toFixed(11))
-          var test = (Math.round(n) / multiplicator)
+          let multiplicator = Math.pow(10, digits)
+          let n = parseFloat((n * multiplicator).toFixed(11))
+          let test = (Math.round(n) / multiplicator)
           return +(test.toFixed(digits))
         }
         let averageScore = roundTo(((attempts.lcsScore + attempts.commonWordCount)/2),2)

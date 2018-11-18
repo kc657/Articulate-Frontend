@@ -31,7 +31,7 @@ class LandingPage extends Component {
     e.preventDefault()
     $.ajax({
       method: 'POST',
-      url: 'https://articulat.herokuapp.com/signup',
+      url: `${this.props.be_url}/signup`,
       data: {
         first_name: this.state.signUpFirstName,
         last_name: this.state.signUpLastName,
@@ -80,6 +80,7 @@ class LandingPage extends Component {
   render () {
     return (
       <div className='center LandingPage secondary-text-color'>
+        {/* replace brs with css stylinh */}
         <br />
         <br />
         <br />
@@ -91,10 +92,17 @@ class LandingPage extends Component {
         <br />
         <h3 className='text-primary-color font-change'> Refine Your Public Speaking Skills </h3>
         <div className='center'>
-          <a onClick={(e)=>this.toggleSignInModal(e)} className='waves-effect waves-light btn font-change' >Sign In</a> &emsp;
+          <a
+            onClick={(e)=>this.toggleSignInModal(e)}
+            className='waves-effect waves-light btn font-change'
+            > Sign In </a> &emsp;
           <a onClick={(e)=>this.toggleSignupModal(e)} className='waves-effect waves-light btn font-change'>Sign Up</a>
         </div>
-        <SignupModal isSignUpOpen={this.state.isSignUpOpen} toggleSignupModal={(e)=>this.toggleSignupModal(e)} handleSignupSubmit={(e)=>this.handleSignupSubmit(e)} handleChange={(e)=>this.handleChange(e)}
+        <SignupModal
+          isSignUpOpen={this.state.isSignUpOpen}
+          toggleSignupModal={(e)=>this.toggleSignupModal(e)}
+          handleSignupSubmit={(e)=>this.handleSignupSubmit(e)}
+          handleChange={(e)=>this.handleChange(e)}
         />
         <SignInModal isSignInOpen={this.state.isSignInOpen} toggleSignInModal={(e)=>this.toggleSignInModal(e)} handleSignInSubmit={(e)=>this.handleSignInSubmit(e)} handleChange={(e)=>this.handleChange(e)}
         />
